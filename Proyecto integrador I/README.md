@@ -48,7 +48,7 @@ SALIDA:
 - extract_all_data.m: Extrae datos del rosbag
 - ekf_odom_imu.m: Algoritmo EKF (fusion odometria + IMU)
 - evaluate_localization.m: Calcula metricas de error
-- mir_basics_20251210_114529.bag: Rosbag con datos del robot
+- mir_basics_20251210_114529.bag: Rosbag con datos del robot (No se encuentra en el repositorio por tamaño excesivo, recuperar de los materiales de la entrega)
 - analyze_bag.m: Analisis inicial del rosbag
 - plot_scan.m: Visualizacion de scans laser
 - README.md: Este archivo

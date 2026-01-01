@@ -1,33 +1,10 @@
 function [est, debug] = ekf_odom_imu(data, params)
 % EKF_ODOM_IMU - Filtro de Kalman Extendido fusionando Odometría e IMU
-
-% EXPLICACIÓN TEÓRICA (para el informe)
-
-% El EKF (Extended Kalman Filter) es un algoritmo de estimación de estado
-% que funciona en dos pasos:
-
-%   1. PREDICCIÓN: Usamos el modelo de movimiento del robot para predecir
-%      dónde estará en el siguiente instante de tiempo.
-
-%   2. CORRECCIÓN: Usamos las medidas de los sensores para corregir
-%      nuestra predicción y reducir la incertidumbre.
-
-% En nuestro caso:
-%   - PREDICCIÓN: Modelo cinemático diferencial + velocidades de odometría
-%   - CORRECCIÓN: Medida de orientación (yaw) de la IMU
-
-% ¿Por qué funciona esta fusión?
-%   - La odometría es buena para posición (x, y) pero acumula error en yaw
-%   - La IMU mide directamente la orientación, corrigiendo el drift del yaw
-
-
-% MODELO MATEMÁTICO
-%
 % Estado del robot: x = [x; y; theta]
 %   - x, y: posición en metros
 %   - theta: orientación (yaw) en radianes
 
-% Modelo de predicción (ecuaciones cinemáticas):
+% Modelo de predicción (odometría):
 %   x(k+1) = x(k) + v * cos(theta) * dt
 %   y(k+1) = y(k) + v * sin(theta) * dt
 %   theta(k+1) = theta(k) + omega * dt

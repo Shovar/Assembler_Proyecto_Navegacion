@@ -1,0 +1,7 @@
+#Ignore documentation files
+*.png
+*.docx
+
+#Ignore .bag files because they are large
+*.bag
+

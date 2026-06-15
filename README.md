@@ -9,6 +9,7 @@ El objetivo de este proyecto es implementar un sistema de localización y mapeo 
 ## Estructura de Archivos
 - Proyecto integrador I: Se implementa un sistema de localizacion para robot movil usando un Filtro de Kalman Extendido (EKF) que fusiona datos de odometria e IMU.
 - Proyecto integrador II: Se implementa un sistema de construcción de mapas a partir de datos reales de sensores de un robot móvil usando SLAM
+- Proyecto Integrador III: A* + D* Lite → Ruta navegable con replanificación dinámica
 
 ## Referencias Bibliograficas
 
